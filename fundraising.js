@@ -21,6 +21,13 @@ client.on('data', function (data) {
       app.query(client, 'tts', 'stream', {text: message, targetSpeaker: "speakers"}, 30);
     }
 
+  } else if (parsed.type === 'MSG_BROADCAST') {
+    console.log('Broadcast received');
+    if (checkBroadcast(parsed.content)){
+      message = getPrices(parsed.content);
+      app.query(client, 'tts', 'stream', {text: message, targetSpeaker: "speakers"}, 30);
+    }
+
   } else if (parsed.type === 'MSG_QUERY_SUCCESS') {
     console.log('Query successful');
 
@@ -45,7 +52,11 @@ client.on('end', function() {
   console.log('client disconnected');
 });
 
-getPrices(data){
+function checkBroadcast(content){
+  return ((content['action'] === 'price') || (content['action'] === 'cost'));
+}
+
+function getPrices(data){
   price = PRICES[data['item']];
   if (price === null){
   	message = ("I was unable to find the price of the item you requested.");
