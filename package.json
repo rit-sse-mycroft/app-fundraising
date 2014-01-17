@@ -1,0 +1,22 @@
+{
+  "name": "app-fundraising",
+  "version": "0.0.0",
+  "description": "Gets prices of items",
+  "main": "fundraising.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rit-sse-mycroft/app-fundraising.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rit-sse-mycroft/app-fundraising/issues"
+  },
+  "homepage": "https://github.com/rit-sse-mycroft/app-fundraising",
+  "dependencies": {
+    "uuid": "~1.4.1"
+  }
+}
