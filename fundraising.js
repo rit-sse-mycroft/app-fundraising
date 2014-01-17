@@ -18,7 +18,7 @@ client.on('data', function (data) {
     console.log('Query received');
     if (parsed.data['action'] === 'getPrice'){
       message = getPrices(parsed.data);
-      app.query(client, 'tts', 'stream', {text: price, targetSpeaker: "speakers"}, 30)
+      app.query(client, 'tts', 'stream', {text: message, targetSpeaker: "speakers"}, 30);
     }
 
   } else if (parsed.type === 'MSG_QUERY_SUCCESS') {
@@ -46,6 +46,10 @@ client.on('end', function() {
 });
 
 getPrices(data){
-  price = PRICES[data['item']]
-  message = (data['item'] + " costs " + price)
+  price = PRICES[data['item']];
+  if (price === null){
+  	message = ("I was unable to find the price of the item you requested.");
+    return message;
+  }
+  message = (data['item'] + " costs " + price);
 }
