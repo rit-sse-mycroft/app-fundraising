@@ -1,14 +1,13 @@
 {
     "version": "0.0.1",
-    "name": "test-service",
-    "displayName": "Mycroft test service",
-    "instanceId": "mockapp1",
-    "capabilities": {
-      "mocking": "0.4.2"
-    },
+    "name": "FundraisingApp",
+    "displayName": "Fundraising Price Checker",
+    "instanceId": "fundraising",
+    "capabilities": {},
     "API": "0",
-    "description": "It does odd stuff like testing or things",
+    "description": "Returns the prices of items from fundraising.",
     "dependencies": {
-        "logger": "1.2"
+        "logger": "1.2",
+        "speakers": "1.0"
     }
 }

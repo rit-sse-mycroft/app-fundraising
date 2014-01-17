@@ -1,7 +1,9 @@
 var app = require('./app.js');
 var client = app.connectToMycroft();
+var PRICELIST = require('./prices.json');
 
 app.sendManifest(client, './app.json');
+PRICES = JSON.parse(PRICELIST);
 
 var verified = false; //Set to true when APP_MANIFEST_OKAY received
 
@@ -14,6 +16,10 @@ client.on('data', function (data) {
 
   } else if (parsed.type === 'MSG_QUERY') {
     console.log('Query received');
+    if (parsed.data['action'] === 'getPrice'){
+      message = getPrices(parsed.data);
+      app.query(client, 'tts', 'stream', {text: price, targetSpeaker: "speakers"}, 30)
+    }
 
   } else if (parsed.type === 'MSG_QUERY_SUCCESS') {
     console.log('Query successful');
@@ -38,3 +44,8 @@ client.on('data', function (data) {
 client.on('end', function() {
   console.log('client disconnected');
 });
+
+getPrices(data){
+  price = PRICES[data['item']]
+  message = (data['item'] + " costs " + price)
+}
