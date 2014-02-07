@@ -1,37 +1,177 @@
-{
-	"Chips": "$0.25",
-	"Air Heads": "$0.25",
-	"Reese's Peanut Butter Cups": "$0.75",
-	"Hershey’s Chocolate Bars": "$0.75",
-    "Kit Kat": "$0.75",
-    "Pop-Tarts": "$0.50",
-    "Skittles": "$0.75",
-    "Starburst": "$0.75",
-    "3 Muskateers": "$0.75",
-    "M&M’s": "$0.75",
-    "Snickers": "$0.75",
-    "Rice Crispie Treats": "$0.25",
-    "Pringles": "$0.25",
-    "Cereal": "$0.50",
-    "Welchs Fruit Snacks": "$0.50",
-    "Quaker Oat Bars": "$0.25",
-    "Nabisco Minis": "$0.50",
-    "Sandwich Crackers": "$0.25",
-    "Famous Amos Cookies": "$0.50",
-    "Fruit By The Foot": "$0.50",
-    "Capri Sun": "$0.25",
-    "IBC Root Beer": "$0.75",
-    "Coca-Cola": "$0.50",
-    "Pepsi": "$0.50",
-    "Dr. Pepper": "$0.50",
-    "Mt. Dew": "$0.50",
-    "Sunkist": "$0.50",
-    "Snapple": "$0.75",
-    "Arnold Palmer": "$0.50",
-    "Freezepop": "$0.25",
-    "T-Shirt": "$15.00",
-    "Polo": "$20.00",
-    "Tie": "$25.00",
-    "Padfolio": "$30.00",
-    "Sticker": "$1.00"
-}
+[
+	{
+        "name": "Chips",
+        "price": "$0.25",
+        "barcode": []
+    },
+	{
+        "name": "Air Heads",
+        "price": "$0.25",
+        "barcode": []
+    },
+	{
+        "name": "Reese's Peanut Butter Cups",
+        "price": "$0.75",
+        "barcode": []
+    },
+	{
+        "name": "Hershey’s Chocolate Bars",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Kit Kat",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Pop-Tarts",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Skittles",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Starburst",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "3 Muskateers",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "M&M’s",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Snickers",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Rice Crispie Treats",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "Pringles",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "Cereal",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Welchs Fruit Snacks",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Quaker Oat Bars",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "Nabisco Minis",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Sandwich Crackers",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "Famous Amos Cookies",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Fruit By The Foot",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Capri Sun",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "IBC Root Beer",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Coca-Cola",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Pepsi",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Dr. Pepper",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Mt. Dew",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Sunkist",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Snapple",
+        "price": "$0.75",
+        "barcode": []
+    },
+    {
+        "name": "Arnold Palmer",
+        "price": "$0.50",
+        "barcode": []
+    },
+    {
+        "name": "Freezepop",
+        "price": "$0.25",
+        "barcode": []
+    },
+    {
+        "name": "T-Shirt",
+        "price": "$15.00",
+        "barcode": []
+    },
+    {
+        "name": "Polo",
+        "price": "$20.00",
+        "barcode": []
+    },
+    {
+        "name": "Tie",
+        "price": "$25.00",
+        "barcode": []
+    },
+    {
+        "name": "Padfolio",
+        "price": "$30.00",
+        "barcode": []
+    },
+    {
+        "name": "Sticker",
+        "price": "$1.00",
+        "barcode": []
+    }
+]
