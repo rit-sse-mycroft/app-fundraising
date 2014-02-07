@@ -1,176 +1,211 @@
 [
 	{
         "name": "Chips",
+        "otherNames": [],
         "price": "$0.25",
         "barcode": []
     },
 	{
         "name": "Air Heads",
+        "otherNames": [],
         "price": "$0.25",
         "barcode": []
     },
 	{
         "name": "Reese's Peanut Butter Cups",
+        "otherNames": ["Reese's", "Peanut Butter Cups"],
         "price": "$0.75",
         "barcode": []
     },
 	{
         "name": "Hershey’s Chocolate Bars",
+        "otherNames": ["Hershey Bar"],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Kit Kat",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Pop-Tarts",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Skittles",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Starburst",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
-        "name": "3 Muskateers",
+        "name": "3 Musketeers",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "M&M’s",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Snickers",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
-        "name": "Rice Crispie Treats",
+        "name": "Rice Krispie Treats",
+        "otherNames": [],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "Pringles",
+        "otherNames": [],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "Cereal",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
-        "name": "Welchs Fruit Snacks",
+        "name": "Welch's Fruit Snacks",
+        "otherNames": ["Fruit Snacks"],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Quaker Oat Bars",
+        "otherNames": ["Granola Bars"],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "Nabisco Minis",
+        "otherNames": ["Nabisco Cookies"],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Sandwich Crackers",
+        "otherNames": ["Ritz Crackers"],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "Famous Amos Cookies",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Fruit By The Foot",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Capri Sun",
+        "otherNames": [],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "IBC Root Beer",
+        "otherNames": ["Root Beer"],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Coca-Cola",
+        "otherNames": ["Coke"],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Pepsi",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Dr. Pepper",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
-        "name": "Mt. Dew",
+        "name": "Mountain Dew",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Sunkist",
+        "otherNames": ["Orange Soda"],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Snapple",
+        "otherNames": [],
         "price": "$0.75",
         "barcode": []
     },
     {
         "name": "Arnold Palmer",
+        "otherNames": [],
         "price": "$0.50",
         "barcode": []
     },
     {
         "name": "Freezepop",
+        "otherNames": ["Freezie Pop"],
         "price": "$0.25",
         "barcode": []
     },
     {
         "name": "T-Shirt",
+        "otherNames": [],
         "price": "$15.00",
         "barcode": []
     },
     {
         "name": "Polo",
+        "otherNames": [],
         "price": "$20.00",
         "barcode": []
     },
     {
         "name": "Tie",
+        "otherNames": [],
         "price": "$25.00",
         "barcode": []
     },
     {
         "name": "Padfolio",
+        "otherNames": [],
         "price": "$30.00",
         "barcode": []
     },
     {
         "name": "Sticker",
+        "otherNames": [],
         "price": "$1.00",
         "barcode": []
     }
