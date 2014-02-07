@@ -18,7 +18,7 @@
         "barcode": []
     },
 	{
-        "name": "Hershey’s Chocolate Bars",
+        "name": "Hershey's Chocolate Bars",
         "otherNames": ["Hershey Bar"],
         "price": "$0.75",
         "barcode": []
@@ -54,8 +54,8 @@
         "barcode": []
     },
     {
-        "name": "M&M’s",
-        "otherNames": [],
+        "name": "M and M's",
+        "otherNames": ["M n M's"],
         "price": "$0.75",
         "barcode": []
     },

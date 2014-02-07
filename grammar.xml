@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="fundraising" version="1.0" tag-format="semantics/1.0">
+  <rule id="items" scope="private">
+    <one-of>
+      <item>Chips</item>
+      <item>Air Heads</item>
+      <item>Reese's Peanut Butter Cups</item>
+      <item>Reese's</item>
+      <item>Peanut Butter Cups</item>
+      <item>Hershey's Chocolate Bars</item>
+      <item>Hershey Bar</item>
+      <item>Kit Kat</item>
+      <item>Pop-Tarts</item>
+      <item>Skittles</item>
+      <item>Starburst</item>
+      <item>3 Musketeers</item>
+      <item>M and M's</item>
+      <item>M n M's</item>
+      <item>Snickers</item>
+      <item>Rice Krispie Treats</item>
+      <item>Pringles</item>
+      <item>Cereal</item>
+      <item>Welch's Fruit Snacks</item>
+      <item>Fruit Snacks</item>
+      <item>Quaker Oat Bars</item>
+      <item>Granola Bars</item>
+      <item>Nabisco Minis</item>
+      <item>Nabisco Cookies</item>
+      <item>Sandwich Crackers</item>
+      <item>Ritz Crackers</item>
+      <item>Famous Amos Cookies</item>
+      <item>Fruit By The Foot</item>
+      <item>Capri Sun</item>
+      <item>IBC Root Beer</item>
+      <item>Root Beer</item>
+      <item>Coca-Cola</item>
+      <item>Coke</item>
+      <item>Pepsi</item>
+      <item>Dr. Pepper</item>
+      <item>Mountain Dew</item>
+      <item>Sunkist</item>
+      <item>Orange Soda</item>
+      <item>Snapple</item>
+      <item>Arnold Palmer</item>
+      <item>Freezepop</item>
+      <item>Freezie Pop</item>
+      <item>T-Shirt</item>
+      <item>Polo</item>
+      <item>Tie</item>
+      <item>Padfolio</item>
+      <item>Sticker</item>
+    </one-of>
+  </rule>
+  <rule id="fundraising" scope="private">
+    <item>Mycroft how much</item>
+    <one-of>
+      <item>does</item>
+      <item>do</item>
+      <item>is</item>
+      <item>are</item>
+    </one-of>
+    <item repeat="0-1">the</item>
+    <ruleref uri="items"/>
+    <tag>out.item=rules.items;</tag>
+    <item repeat="0-1">cost</item>
+  </rule>
+</grammar>
