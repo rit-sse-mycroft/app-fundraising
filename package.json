@@ -11,12 +11,10 @@
     "url": "git://github.com/rit-sse-mycroft/app-fundraising.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/rit-sse-mycroft/app-fundraising/issues"
   },
   "homepage": "https://github.com/rit-sse-mycroft/app-fundraising",
-  "dependencies": {
-    "uuid": "~1.4.1"
-  }
+  "dependencies": {}
 }

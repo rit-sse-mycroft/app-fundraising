@@ -1,66 +1,70 @@
-var app = require('./app.js');
-var client = app.connectToMycroft();
-var PRICELIST = require('./prices.json');
+var mycroft = require('./mycroft.js');
+var client = mycroft.Mycroft('fundraising', 'app.json', 'localhost', 1847)
+var items = JSON.parse(require('./items.json'));
 
-app.sendManifest(client, './app.json');
-PRICES = JSON.parse(PRICELIST);
+var sentGrammar = false;
 
-var verified = false; //Set to true when APP_MANIFEST_OKAY received
+//Handler for CONNECTION_CLOSED
+client.on('CONNECTION_CLOSED', function(data){
+  client.query('stt', 'unload_grammar', {grammar: 'fundraising'});
+});
 
-client.on('data', function (data) {
-  parsed = app.parseMessage(data);
-  //Check the type of ths message
-  if (parsed.type === 'APP_MANIFEST_OK' || 'APP_MANIFEST_FAIL') {
-    var dependencies = app.manifestCheck(data);
-    verified = true;
-
-  } else if (parsed.type === 'MSG_QUERY') {
-    console.log('Query received');
-    if (parsed.data['action'] === 'getPrice'){
-      message = getPrices(parsed.data);
-      app.query(client, 'tts', 'stream', {text: message, targetSpeaker: "speakers"}, 30);
+// Handler for APP_DEPENDENCY
+client.on('APP_DEPENDENCY', function(data){
+  client.updateDependencies(data);
+  if(client.dependencies.stt !== undefined && client.dependencies.tts !== undefined) {
+    if(client.stt.stt1 === 'up' && !sentGrammar){
+      var grammarData = {
+        grammar: {
+          name: 'fundraising',
+          xml: fs.readFileSync('./grammar.xml').toString()
+        }
+      };
+      app.query(client, 'stt', 'load_grammar', grammarData, ['stt1'], 30);
+      sentGrammer = true;
+    }else if(client.dependencies.stt.stt1 === 'down' && sentGrammar){
+      sentGrammar = false;
     }
-
-  } else if (parsed.type === 'MSG_BROADCAST') {
-    console.log('Broadcast received');
-    if (checkBroadcast(parsed.content)){
-      message = getPrices(parsed.content);
-      app.query(client, 'tts', 'stream', {text: message, targetSpeaker: "speakers"}, 30);
+    if(client.status.down && client.dependencies.tts.text2speech === 'up' && client.dependencies.stt.stt1 === 'up'){
+      up();
+    }else if(client.status.up && (client.dependencies.tts.text2speech === 'down' || client.dependencies.stt.stt1 === 'down')){
+      down();
     }
-
-  } else if (parsed.type === 'MSG_QUERY_SUCCESS') {
-    console.log('Query successful');
-
-  } else if (parsed.type === 'MSG_QUERY_FAIL') {
-    console.error('Query Failed.');
-    throw parsed.data.message;
-
-  } else {
-    console.log('Message Receieved');
-    console.log(' - Type: ' + parsed.type);
-    console.log(' - Message:' + JSON.stringify(parsed.data));
-  }
-  
-  if(dependencies){
-  	if(dependencies.logger == 'up'){
-  		app.up(client);
-  	}
   }
 });
 
-client.on('end', function() {
-  console.log('client disconnected');
+// Handler for MSG_BROADCAST
+client.on('MSG_BROADCAST', function(data){
+  if(data.content.grammar === 'fundraising'){
+    itemName = data.tags.item;
+    item = findItemName(itemName);
+  } else if(data.content.barcode !== undefined){
+    barcode = data.content.barcode;
+    item = findItemBarcode(barcode);
+  }
+  if(item !== null){
+    message = "The price of " + item.name + " is " + item.price;
+    tts_message = [{phrase: message, delay: 0}];
+    client.query('tts', 'stream', tts_message);
+  }
 });
 
-function checkBroadcast(content){
-  return ((content['action'] === 'price') || (content['action'] === 'cost'));
+// Find an item based on its barcode
+function findItemBarcode(barcode){
+  for(i = 0; i< items.length; i++){
+    if(items[i].barcodes.indexOf(barcdoe) !== -1){
+      return items[i];
+    }
+  }
+  return null;
 }
 
-function getPrices(data){
-  price = PRICES[data['item']];
-  if (price === null){
-  	message = ("I was unable to find the price of the item you requested.");
-    return message;
+// Find an item based on its name
+function findItemName(name){
+  for(i = 0; i < items.length; i++){
+    if(items[i].name === name || items[i].otherNames.indexOf(name) !== -1){
+      return items[i];
+    }
   }
-  message = (data['item'] + " costs " + price);
+  return null;
 }
