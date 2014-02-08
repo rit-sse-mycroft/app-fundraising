@@ -1,6 +1,6 @@
-var mycroft = require('./mycroft.js');
+var mycroft = require('mycroft');
 var client = mycroft.Mycroft('fundraising', 'app.json', 'localhost', 1847)
-var items = JSON.parse(require('./items.json'));
+var items = require('./items.json');
 
 var sentGrammar = false;
 
@@ -68,3 +68,6 @@ function findItemName(name){
   }
   return null;
 }
+
+client.connect();
+client.sendManifest();
